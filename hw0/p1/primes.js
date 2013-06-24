@@ -1,5 +1,8 @@
+// writes the first 100 prime numbers to a file, with each prime separated by a comma.
+
 var fs = require("fs");
 
+//function return a string with prime numbers, where each prime separated by a comma
 var primes = function(primeCount) {
 		primes = "2";
 		count = 1; // 2 is prime
@@ -15,6 +18,7 @@ var primes = function(primeCount) {
 		return primes;
 	}
 	
+//function check if the number passing as parameter is a prime number
 var isPrime = function(n) {
 	if (n == 1)
 			return false;
@@ -41,6 +45,6 @@ var isPrime = function(n) {
 		}
 		
 	}
-
+//get 100 first primes
 p = primes(100);
 fs.writeFile("./primes.txt", p);
